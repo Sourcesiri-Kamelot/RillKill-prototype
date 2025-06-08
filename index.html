@@ -6,9 +6,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RillKik - File Management System</title>
     <meta name="description" content="RillKik - A modern file management system for organizing and previewing your files" />
+    <style>
+      :root {
+        --primary: #3b82f6;
+        --primary-dark: #2563eb;
+        --secondary: #10b981;
+        --background: #f8fafc;
+        --foreground: #1e293b;
+        --muted: #94a3b8;
+        --border: #e2e8f0;
+        --radius: 0.5rem;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        color: var(--foreground);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      header {
+        background-color: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+      }
+      
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary);
+      }
+      
+      main {
+        flex: 1;
+        padding: 2rem 0;
+      }
+      
+      .hero {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .subtitle {
+        font-size: 1.25rem;
+        color: var(--muted);
+        margin-bottom: 2rem;
+      }
+      
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+      
+      .feature-card {
+        background-color: white;
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--primary);
+      }
+      
+      .feature-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .feature-description {
+        color: var(--muted);
+      }
+      
+      .cta {
+        text-align: center;
+        margin-top: 2rem;
+      }
+      
+      .button {
+        display: inline-block;
+        background-color: var(--primary);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--radius);
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.2s;
+      }
+      
+      .button:hover {
+        background-color: var(--primary-dark);
+      }
+      
+      footer {
+        background-color: white;
+        padding: 1.5rem 0;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.875rem;
+      }
+      
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+        
+        .subtitle {
+          font-size: 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">RillKik</div>
+          <div class="coming-soon">Coming Soon</div>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <div class="container">
+        <section class="hero">
+          <h1>Modern File Management System</h1>
+          <p class="subtitle">Organize, preview, and manage your files with ease</p>
+        </section>
+        
+        <section class="features">
+          <div class="feature-card">
+            <div class="feature-icon">📁</div>
+            <h3 class="feature-title">Smart Organization</h3>
+            <p class="feature-description">Automatically categorize and organize your files with intelligent tagging system.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">👁️</div>
+            <h3 class="feature-title">Preview Everything</h3>
+            <p class="feature-description">Preview documents, images, videos, and more without downloading or opening external apps.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h3 class="feature-title">Powerful Search</h3>
+            <p class="feature-description">Find any file instantly with our powerful search and filtering capabilities.</p>
+          </div>
+        </section>
+        
+        <div class="cta">
+          <p>Our full application is coming soon. Stay tuned!</p>
+          <a href="#" class="button">Learn More</a>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 RillKik. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
