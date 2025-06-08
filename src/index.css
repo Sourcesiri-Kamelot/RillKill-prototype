@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 13% 9%;
+  --foreground: 220 9% 95%;
+  --card: 220 13% 11%;
+  --card-foreground: 220 9% 95%;
+  --popover: 220 13% 11%;
+  --popover-foreground: 220 9% 95%;
+  --primary: 346 77% 49%;
+  --primary-foreground: 220 9% 95%;
+  --secondary: 220 13% 15%;
+  --secondary-foreground: 220 9% 95%;
+  --muted: 220 13% 15%;
+  --muted-foreground: 220 9% 65%;
+  --accent: 220 13% 15%;
+  --accent-foreground: 220 9% 95%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 220 9% 95%;
+  --border: 220 13% 20%;
+  --input: 220 13% 20%;
+  --ring: 346 77% 49%;
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-glow {
+  box-shadow: 0 0 20px rgba(220, 38, 127, 0.3);
+}
+
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.drag-overlay {
+  background: linear-gradient(45deg, rgba(220, 38, 127, 0.1), rgba(59, 130, 246, 0.1));
+  border: 2px dashed rgba(220, 38, 127, 0.5);
+}
+
+.category-video { border-left: 4px solid #ef4444; }
+.category-script { border-left: 4px solid #22c55e; }
+.category-audio { border-left: 4px solid #f59e0b; }
+.category-notes { border-left: 4px solid #8b5cf6; }
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(220, 38, 127, 0.5);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(220, 38, 127, 0.7);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(220, 38, 127, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(220, 38, 127, 0.6); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
